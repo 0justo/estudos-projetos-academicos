@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de dados</title>
+</head>
+<body>
+    <h1>Jogo de dados</h1>
+    <input type="button" value="Sortear" id="btSortear">
+    <div id="area"></div>
+    <div id="res"></div>
+    <script>
+        btSortear.addEventListener('click', sortear);
+
+        var lanc = 0;
+        var ocor = new Array(0,0,0,0,0,0);
+
+        function sortear() {
+            var lado = Math.floor(Math.random() * 6) +1;
+            ocor[lado-1]++;
+            lanc++;
+            area.innerHTML += '<img src="./img/dado_' + lado + '.jpg">';
+            res.innerHTML = '<h3>Resultado:</h3>';
+            for (var i=0; i<ocor.length; i++) {
+                var pct = ocor[i] / lanc *100;
+                res.innerHTML += 'O lado ' + (i+1) + ' ocorreu ' + ocor[i] + ' vezes (' + pct.toFixed(1) + '%)<br>';
+            }
+        }
+    </script>
+</body>
+</html>

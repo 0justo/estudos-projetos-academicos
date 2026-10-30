@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculadora</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="calculadora.css" />
+</head>
+
+<body>
+    <h2>Calculadora</h2>
+    <table>
+        <tr>
+            <td colspan="4">
+                <textarea id="txArea" rows="8" readonly></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <input type="text" id="res" value="0" size="16" readonly>
+                <input type="hidden" id="v1" value="0">
+                <input type="hidden" id="op" value="">
+            </td>
+        </tr>
+        <tr>
+            <td><input type="button" id="off" value="Off"></td>
+            <td><input type="button" id="lim" value=" C "></td>
+            <td><input type="button" id="raiz" value=" &Sqrt; "></td>
+            <td><button id="potencia">x<sup>y</sup></button></td>
+        </tr>
+        <tr>
+            <td><input type="button" id="d7" value=" 7 "></td>
+            <td><input type="button" id="d8" value=" 8 "></td>
+            <td><input type="button" id="d9" value=" 9 "></td>
+            <td><input type="button" id="div" value=" &divide; "></td>
+        </tr>
+        <tr>
+            <td><input type="button" id="d4" value=" 4 "></td>
+            <td><input type="button" id="d5" value=" 5 "></td>
+            <td><input type="button" id="d6" value=" 6 "></td>
+            <td><input type="button" id="mul" value=" &times; "></td>
+        </tr>
+        <tr>
+            <td><input type="button" id="d1" value=" 1 "></td>
+            <td><input type="button" id="d2" value=" 2 "></td>
+            <td><input type="button" id="d3" value=" 3 "></td>
+            <td><input type="button" id="sub" value=" &minus; "></td>
+        </tr>
+        <tr>
+            <td><input type="button" id="d0" value=" 0 "></td>
+            <td><input type="button" id="sep" value=" , "></td>
+            <td><input type="button" id="tot" value=" = "></td>
+            <td><input type="button" id="adi" value=" &plus; "></td>
+        </tr>
+    </table>
+    <script type="text/javascript" src="calculadora.js"></script>
+</body>
+
+</html>

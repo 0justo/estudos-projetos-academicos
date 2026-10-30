@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Produto</title>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <h1>Produto</h1>
+    <table border="0">
+      <tr>
+        <td align="right">Descrição:</td>
+        <td>
+          <input type="text" id="desc" value="" size="20" maxlength="20" />
+        </td>
+      </tr>
+      <tr>
+        <td align="right">Quantidade:</td>
+        <td><input type="text" id="qtd" value="" size="3" maxlength="3" /></td>
+      </tr>
+      <tr>
+        <td align="right">Preço Unitário:</td>
+        <td>
+          <input type="text" id="unit" value="" size="10" maxlength="10" />
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2"><input type="button" value="Calcular" id="calc" /></td>
+      </tr>
+      Cláudio Luís Vieira Oliveira 64
+      <tr>
+        <td align="right">Preço Total:</td>
+        <td><input type="text" id="total" value="" size="10" readonly /></td>
+      </tr>
+    </table>
+    <div id="msgErro" style="color: brown"></div>
+    <script src="produto-0.js">
+      desc.addEventListener("blur", validarDescricao);
+      qtd.addEventListener("blur", validarQuantidade);
+      unit.addEventListener("blur", validarPreco);
+      calc.addEventListener("click", calcular);
+
+      function validarDescricao() {
+      if (desc.value.trim()==="") {
+        msgErro.innerHTML="Preencha a descrição do produto!";
+        desc.style.background="yellow";
+        desc.focus();
+        return false;
+      }
+      else {
+        desc.style.background="white";
+        msgErro.innerHTML="";
+        return true;
+      }
+      }
+    </script>
+  </body>
+</html>

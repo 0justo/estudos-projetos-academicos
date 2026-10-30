@@ -1,0 +1,12 @@
+table {
+    background-color: gray;
+    border: 0px;
+    padding: 4px;
+    border-spacing: 0px;
+}
+
+#res {
+    display: inline-block;
+    text-align: right;
+}
+

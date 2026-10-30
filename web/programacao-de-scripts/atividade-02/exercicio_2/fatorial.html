@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./fatorial.css" />
+    <title>Cálculo fatorial de número inteiro.</title>
+</head>
+<body id="body">
+    <h1>Calcule o fatorial de um número inteiro:</h1>
+    Número inteiro: <input type="text" id="txNum"><br>
+    <input type="button" onclick="calcular()" value="Calcular o fatorial!" id="btCalcular">
+    <div id="res"></div>
+    <script>
+        function calcular () {
+            var num = Number (txNum.value);
+            var result = num;
+            for (var i = num-1; i > 1 ; i--) {
+                result = result * i;
+            }
+            res.innerText = num + " fatorial = " + result;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variável Global</title>
+  </head>
+  <body>
+    <h1>Contador</h1>
+    <input type="text" id="txNum" value="0" />
+    <input type="button" id="mais" value="+" />
+    <input type="button" id="menos" value="-" />
+    <script>
+      mais.addEventListener("click", inc);
+      menos.addEventListener("click", dec);
+
+      var num = 0;
+
+      function inc() {
+        num++;
+        if (num < 10 || num > 0) txNum.value = num;
+        else txNum.value = 10;
+      }
+      function dec() {
+        num--;
+        if (num > 0 || num < 10) txNum.value = num;
+        else txNum.value = 0;
+      }
+    </script>
+  </body>
+</html>

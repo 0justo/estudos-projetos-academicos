@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de moedas</title>
+</head>
+<body>
+    <h1>Conversor de Moedas</h1>
+    <p>Valor: <input type='text' id='de'></p>
+    <p>Cotação: <input type='text' id='ct'></p>
+    <p>Tipo de Conversão:</p>
+    <input type="radio" id="real_dolar" name="op" checked> Real para Dólar<br>
+    <input type="radio" id="dolar_real" name="op"> Dólar para Real<br>
+    <input type="radio" id="real_euro" name="op"> Real para Euro<br>
+    <input type="radio" id="euro_real" name="op"> Euro para Real<br>
+    <p><input type='button' value='Converter' id='btConverter'></p>
+    <div id="res"></div>
+
+    <script>
+        btConverter.addEventListener ("click", converter);
+
+        function converter () {
+            var valor = parseFloat(de.value);
+            var cotacao = parseFloat (ct.value);
+            if (real_dolar.checked == true) {
+                res.innerHTML = 'R$ ' + valor.toFixed(2) + ' = US$ ' + (valor / cotacao).toFixed(2);
+            }            
+            else if (dolar_real.checked == true) {
+                res.innerHTML = 'US$ ' + valor.toFixed(2) + ' = R$ ' + (valor / cotacao).toFixed(2);
+            }
+            else if (real_euro.checked == true){
+                res.innerHTML = 'R$ ' + valor.toFixed(2) + ' = EU$ ' + (valor / cotacao).toFixed(2);
+            }
+            else {
+                res.innerHTML = 'EUR$ ' + valor.toFixed(2) + ' = R$ ' + (valor / cotacao).toFixed(2);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+* text=auto
+# Os códigos em C foram salvos no Windows em Latin-1 (ISO-8859-1).
+# Assim o GitHub mostra os acentos certos e o arquivo continua igual no seu computador.
+*.c text working-tree-encoding=ISO-8859-1
+*.sb3 binary
+*.aia binary
+*.p8 text
+*.pdf binary
+*.xlsx binary

@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    padding: 40px 20px;
+}
+
+h1 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 8px;
+    text-align: center;
+}
+
+p {
+    color: #555;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    text-align: center;
+}
+
+form {
+    text-align: center;
+}
+
+input[type="radio"] {
+    margin-bottom: 10px;
+    cursor: pointer;
+    accent-color: #3498db;
+    transform: scale(1.1);
+}
+
+#res {
+    color: #555;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    text-align: center;
+}

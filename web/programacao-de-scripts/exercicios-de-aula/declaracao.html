@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quem eu amo?</title>
+    <style>
+        img {
+            width: 25%;
+            height: auto;
+        }
+        h1 {
+            text-align: center;
+            color: red;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+        }
+        button {
+            text-align: center;
+            height: auto;
+            width: 20%;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quem eu amo?</h1>
+    <center><input type="button" value="Quem é o amor do Carlos?" id="amor"></center>
+    <div id="love"></div>
+    <script>
+        amor.addEventListener ('click', diga);
+
+        function diga () {
+            love.innerHTML = '<center><img src="./img/jane.jpg"></center>';
+        }
+    </script>
+</body>
+</html>

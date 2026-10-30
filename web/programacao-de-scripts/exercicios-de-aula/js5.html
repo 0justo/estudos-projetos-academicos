@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+</head>
+<body>
+    <h1>Contador</h1>
+    Início: <input type="text" id="txIni"><br>
+    Fim: <input type="text" id="txFim"><br>
+    <input type="button" value="Contar" id="btContar">
+    <div id="res"></div>
+    <script>
+        btContar.addEventListener("click", contar);
+
+        function contar() {
+            var ini = parseInt(txIni.value);
+            var fim = parseInt(txFim.value);
+            res.innerHTML = '';
+            var i = ini;
+            while (i <= fim) {
+                res.innerHTML += i + ',';
+                i++;
+            }
+        }
+    </script>
+</body>
+</html>

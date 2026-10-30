@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+    <h1>Formulários</h1>
+    <p>
+        Digite o seu nome:
+        <input type="text" value="" id="nome">
+    </p>
+    <p>
+        Digite o seu ano de nascimento:
+        <input type="text" id="nasc">
+    </p>
+    <p>
+        <input type="button" value="Calcular" onclick="calcular()">
+    </p>
+    <div id="res"></div>
+    <script>
+        function calcular() {
+            var idade = 2026 - parseInt(nasc.value);
+            //alert(nome.value + ', a sua idade é: ' + idade + ' anos');
+            res.style.backgrounColor = 'yellow';
+            res.style.fontSize = '18pt';
+            res.innerHTML =                                                                                                                              nome.value + ', a sua idade é: ' + idade + ' anos';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+﻿id_cliente,nome_cliente,cidade,estado,segmento
+1,Ana Souza,São Paulo,SP,Varejo
+2,João Lima,Rio de Janeiro,RJ,Atacado
+3,Carla Nunes,Belo Horizonte,MG,Varejo
+4,Marcos Dias,Curitiba,PR,Atacado
+5,Paula Torres,Salvador,BA,Varejo
+6,Lucas Alencar,Porto Alegre,RS,Varejo
+7,Beatriz Ramos,Recife,PE,Atacado
+8,Rodrigo Costa,Fortaleza,CE,Varejo
+9,Juliana Meireles,Brasília,DF,Atacado
+10,Fernanda Rocha,Goiânia,GO,Varejo
+11,Ricardo Santos,Campinas,SP,Atacado
+12,Camila Oliveira,Manaus,AM,Varejo
+13,Mateus Pereira,Belém,PA,Atacado
+14,Gabriela Souza,Vitória,ES,Varejo
+15,Thiago Martins,Florianópolis,SC,Atacado
+16,Amanda Silva,Natal,RN,Varejo
+17,Bruno Alves,Maceió,AL,Atacado
+18,Larissa Fonseca,Teresina,PI,Varejo
+19,Felipe Diniz,São Luís,MA,Atacado
+20,Mariana Lemes,Cuiabá,MT,Varejo

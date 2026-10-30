@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Área</title>
+</head>
+<body>
+    <h1>Calcular a área de um quadrilátero!</h1>
+    Tamanho da base: <input type="text" id="txBase"><br>
+    Tamanho da altura: <input type="text" id="txAltura"><br>
+    <input type="button" value="Calcular" id="btCalcular">
+    <div id="res"></div>
+    <script>
+        btCalcular.addEventListener ("click",calcular);
+
+        function calcular() {
+            var base = parseFloat(txBase.value);
+            var altura = parseFloat(txAltura.value);
+            var area = base * altura;
+            
+            if (base == altura){
+                res.innerHTML = "O quadrilátero é um quadrado de área igual a: " + area;
+            }
+            else {
+                res.innerHTML ="O quadrilátero é um retângulo de área igual a: " + area;
+            }
+        }
+    </script>
+</body>
+</html>

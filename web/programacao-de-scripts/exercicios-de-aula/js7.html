@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Múltiplos</title>
+</head>
+<body>
+    <h1>Múltiplos</h1>
+    <p>Exibir quantas vezes ocorre um número múltiplo.</p>
+    <p>Início: <input type="text" id="txIni" size = "3"></p>
+    <p>Fim: <input type="text" id="txFim" size = "3"></p>
+    <p>Múltiplo: <input type="text" id="txMul" size = "3"></p>
+    <p> <input type="button" value="Exibir" id = "btExibir"></p>
+    <div id="res"></div>
+    <script>
+       btExibir.addEventListener("click", multiplo)
+
+       function multiplo () {
+            var ini = parseInt (txIni.value);
+            var fim = parseInt (txFim.value);
+            var mul = parseInt (txMul.value);
+            var i;
+            var cont = 0;
+            for (i = ini; i<=fim; i++) {
+                var rest = i % mul;
+                if (rest == 0){
+                    cont++;
+                }
+            }
+            res.innerHTML = "Entre " + ini + " e " + fim + " existem " + cont + " múltiplos!"
+       }
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia da semana</title>
+</head>
+<body>
+    <h1>dia da semana</h1>
+    <input type="button" value="Obter" id="btObter">
+    <div id="res"></div>
+    <script>
+        btObter.addEventListener("click", obterDiaSemana);
+        function obterDiaSemana() {
+            var hoje = new Date();
+            var diaSemana = hoje.getDay();
+            var dia = hoje.getDate();
+            var mes = hoje.getMonth();
+            var ano = hoje.getFullYear();
+            var nomeMes = new Array("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", 
+                                    "Julho" , "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro");
+            var nomeDiaSemana = "";
+            switch (diaSemana) {
+                case 0:
+                    nomeDiaSemana = "Domingo";
+                    break;
+                case 1:
+                    nomeDiaSemana = "Segunda-feira"
+                    break;
+                case 2:
+                    nomeDiaSemana = "Terça-feira"
+                    break;
+                case 3:
+                    nomeDiaSemana = "Quarta-feira"
+                    break;
+                case 4:
+                    nomeDiaSemana = "Quinta-feira"
+                    break;
+                case 5:
+                    nomeDiaSemana = "Sexta-feira"
+                    break;
+                case 6:
+                    nomeDiaSemana = "Sábado"
+                    break; 
+            }         
+            res.innerHTML = "Hoje é " + nomeDiaSemana + "," + dia + " de " + nomeMes[mes] + " de " + ano ;  
+        }
+    </script>
+</body>
+</html>

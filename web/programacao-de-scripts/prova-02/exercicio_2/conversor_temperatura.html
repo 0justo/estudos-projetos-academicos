@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="conversor_temperatura.css" />
+    <title>Conversor de temperatura</title>
+  </head>
+  <body>
+    <h1>Conversor de temperatura</h1>
+    <p>Valor: <input type='text' id='temp1'></p>
+    <p>Tipo de Conversão:</p>
+    <input type="radio" id="c_f" name="op" checked> Célsius para Fahrenheit<br>
+    <input type="radio" id="f_c" name="op"> Fahrenheit para Célsius<br>
+    <input type="radio" id="c_k" name="op"> Célsius para Kelvin<br>
+    <input type="radio" id="k_c" name="op"> Kelvin para Célsius<br>
+    <input type="radio" id="f_k" name="op"> Fahrenheit para Kelvin<br>
+    <input type="radio" id="k_f" name="op"> Kelvin para Fahrenheit<br>
+    <p><input type='button' value='Converter' id='btConverter'></p>
+    <p>Resultado da conversão: <span id="res"></span></p>
+    <script type="text/javascript" src="./conversor_temperatura.js"></script>
+  </body>
+</html>

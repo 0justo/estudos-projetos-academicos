@@ -1,0 +1,131 @@
+Alunos: André Silva Rosa, Carlos Eduardo Moreira dos Santos, Géssica Cunha do Nascimento, Igor Gabriel da Silva de Araújo, Lucas Mateus Vaz de Lima.
+
+Exercício 3-
+
+#include <stdio.h>
+#include <locale.h>
+
+main ()
+{
+	setlocale(LC_ALL,"portuguese");
+	int p, s;
+	float pr;
+	printf("Informe o preço base: "); scanf("%f",&pr);
+	printf("\nAs opções do Cardapio são:\n1-Peixe;\n2-Carne Bovina;\n3-Frango;\n4-Vegetariano;\nOutro número - Prato do dia;");
+	printf("\n\nDigite a opção do cardápio = ");
+	scanf("%d",&p);
+	printf("\nO cliente optou por sobremesa ? \n0-Não\n1-Sim \n=");
+	scanf("%d",&s);
+	if (p==1)
+	{
+		printf("\nVocê escolheu Peixe."); pr=pr*1.1;
+	}
+	else if (p==2)
+	{
+		printf("\nVocê escolheu Carne bovina."); pr=pr*1.2;
+	}
+	else if (p==3)
+	{
+		printf ("\nVocê escolheu Frango."); pr=pr*1.15;
+	}
+	else if (p==4)
+	{
+		printf ("\nVocê escolheu Vegetariano."); pr=pr*1.05;
+	}
+	else 
+	{
+		printf ("\nVocê optou pelo prato do dia."); pr=pr;
+	}
+	if (s==0)
+	{
+		pr=pr; 
+		printf ("\nO cliente não pediu sobremesa.");
+	}
+	else
+	{
+		pr=pr*1.05;
+		printf ("\nO cliente pediu sobremesa.");
+	}
+	printf("\nO valor final fica em = %.2f",pr);
+}
+
+Exercício 6-
+
+#include <stdio.h>
+#include <math.h>
+
+main()
+{
+	float peso,altura,imc;
+	
+	printf("\nDigite o peso em KG: ");
+	scanf("%f",&peso);
+	
+	printf("\nDigite a altura em metros: ");
+	scanf("%f",&altura);
+	imc = peso / (altura*altura);
+	printf("\nIMC: %.2f",imc);
+	if(imc<20)
+	{
+		printf("\nClassificacao: subnormal");
+	}
+	else if(imc>=20 && imc<25)
+	{
+		printf("\nClassificacao: Normal");
+    	}
+	else if(imc>=25 && imc<30)
+	{
+    	printf("\nClassificacao: Sobrepeso");
+	}
+	else if(imc>=30 && imc<35)
+	{
+		printf("\nClassificacao: Obesidade leve");
+	}
+	else if(imc>=35 && imc<40)
+	{
+		printf("\nClassificacao: Obesidade moderada");
+	}
+	else
+	{
+		printf("\nClassificacao: Obesidade morbida");
+	}
+	
+}
+
+Exercício 9-
+
+#include <stdio.h>
+
+main ()
+{
+	float n1,n2;
+	int o;
+	printf ("\nDigite o primeiro numero: "); scanf ("%f",&n1);
+	printf ("\nDigite o segundo numero: "); scanf ("%f",&n2);
+	printf ("\nEscolha uma operacao: \n1-adicao; \n2-subtracao; \n3-multiplicacao; \n4-divisao \n\n"); scanf ("%d",&o);
+	if (o==4 && n2==0) printf ("\nEssa operacao nao pode ser executada");
+	else 
+	{
+		if (o==1) n1=n1+n2;
+		else if (o==2) n1=n1-n2;
+		else if (o==3) n1=n1*n2;
+		else if (o==4) n1=n1/n2;
+		printf ("\nO resultado da operacao e: %.2f",n1);
+	}
+}
+
+Exercício 10-
+#include <stdio.h>
+
+main ()
+{
+	int a,ra,rac,raq;
+	printf ("Digite o ano desejado: "); scanf ("%d",&a);
+	ra=a%4;
+	rac=a%100;
+	raq=a%400;
+	if (raq==0) printf ("\nAno bissexto.");
+	else if (rac==0) printf ("\nAno nao bissexto");
+	else if (ra==0) printf ("\nAno bissexto.");
+	else printf ("\nAno nao bissexto.");
+}

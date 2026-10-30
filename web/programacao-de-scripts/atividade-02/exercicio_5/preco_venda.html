@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular venda</title>
+</head>
+<body>
+    <h1>Cálculo preço de venda</h1>
+    Valor: <input type="text" id="txValor"><br>
+    Quantidade: <input type="text" id="txQtd"><br>
+    Desconto: <input type="text" id="txDes"> %<br>
+    <input type="button" value="Calcular" id="btCalcular">
+    <div id="res"></div>
+
+    <script>
+        btCalcular.addEventListener("click", calcular);
+
+        function calcular() {
+            var valor = parseFloat(txValor.value);
+            var qtd = parseFloat(txQtd.value);
+            var desc = parseFloat(txDes.value);
+            var final = (valor * qtd) * ((100-desc)/100);
+            res.innerHTML = "O valor final é: " + final + " reais!"
+        }
+    </script>
+</body>
+</html>

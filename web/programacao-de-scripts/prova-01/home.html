@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./prova_css/csspaginas.css" />
+    <title>Home: Proclamação da República</title>
+</head>
+
+<body id="fundo">
+    <h1
+        style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color:green; padding:20px; text-align: center;">
+        A proclamação da República</h1>
+    <img src="./provaCimg1.png" alt="proclamação">
+    <p id="texto">A Proclamação da República Brasileira aconteceu no dia 15 de novembro de 1889. Resultado de um levante
+        político-militar que deu inicio à República
+        Federativa Presidencialista. Fica marcada a figura de Marechal Deodoro da Fonseca como responsável pela efetiva
+        proclamação e como primeiro Presidente da
+        República brasileira em um governo provisório (1889-1891).
+        Marechal Deodoro da Fonseca foi herói na guerra do Paraguai (1864-1870), comandando um dos Batalhões de Brigada
+        Expedicionária. Sempre contrário ao
+        movimento republicano e defensor da Monarquia como deixa claro em cartas trocadas com seu sobrinho Clodoaldo da
+        Fonseca em 1888 afirmando que apesar de
+        todos os seus problemas a Monarquia continuava sendo o “único sustentáculo” do país, e a república sendo
+        proclamada constituiria uma “verdadeira desgraça”
+        por não estarem, os brasileiros, preparados para ela.</p>
+    <p id="lista">Sobre a proclamação, podemos destacar três tópicos:</p>
+    <ul id="lista">
+        <li><a href="pagina2.html">A crise no império</a></li>
+        <li><a href="pagina3.html">A proclamação da república</a></li>
+        <li><a href="pagina4.html">A maçonaria e o positivismo</a></li>
+    </ul>
+    <h1 id="texto">Agora vamos testar seu conhecimento:</h1>
+    <p id="texto">
+        Ano da Proclamação da República: <input type="text" id="txAr"><br>
+        Ano atual: <input type="text" id="txAa"><br>
+        <input type="button" onclick="calcular()" value="Quantos anos tem a República do Brasil?" id="btCalcular">
+    <div id="res"></div>
+    </p>
+    <script>
+        function calcular() {
+            var ar = parseInt(txAr.value);
+            var aa = parseInt(txAa.value);
+            var result = aa - ar;
+            res.innerText = "A república Brasileira têm " + result + " anos!";
+        }
+    </script>
+</body>
+
+</html>

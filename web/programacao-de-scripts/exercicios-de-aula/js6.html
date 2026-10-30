@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+<body>
+    <h1>Tabuada</h1>
+    <p>Exibir a tabuada de um número digitado pelo usuário</p>
+    <p>Número: <input type="text" id = "txNum" size = "3">
+               <input type="button" value="Exibir" id = "btExibir">
+    </p>
+    <div id="res"></div>
+    <script>
+        btExibir.addEventListener("click", tabuada);
+        
+        function tabuada() {
+            var num = parseInt(txNum.value);
+            res.innerHTML = ' ';
+            for (var i = 1; i<=10; i++) {
+                res.innerHTML += num + " &times; " + i + " = " + (num * i) + "<br>"; 
+            }
+        }
+    </script>
+</body>
+</html>

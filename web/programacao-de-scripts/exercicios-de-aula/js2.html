@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+    <h1>Soma</h1>
+    <p>
+        Valor 1:
+        <input type="text"  id="txV1">
+    </p>
+    <p>
+        Valor 2:
+        <input type="text" id="txV2">
+    </p>
+    <p>
+        <input type="button" value="Somar" id="btSomar">
+        <input type="button" value="Subtrair" id="btSub">
+        <input type="button" value="Dividir" id="btDiv">
+        <input type="button" value="Multiplicar" id="btMult">
+        <input type="button" value="Limpar" id="btLimp">
+    </p>
+    <p>
+        Resultado:
+        <input type="text" id="txRes">
+    </p>
+    <script>
+        btSomar.addEventListener("click", somar);
+        function somar() {
+            var v1 = parseFloat(txV1.value);
+            var v2 = parseFloat(txV2.value);
+            var res = v1 + v2;
+            txRes.value = res;
+        }
+        btSub.addEventListener("click", subtrair);
+        function subtrair() {
+            var v1 = parseFloat(txV1.value);
+            var v2 = parseFloat(txV2.value);
+            var res = v1 - v2;
+            txRes.value = res;
+        }
+        btDiv.addEventListener("click", dividir);
+        function dividir() {
+            var v1 = parseFloat(txV1.value);
+            var v2 = parseFloat(txV2.value);
+            if (v2 != 0)
+                var res = v1 / v2;
+            else
+                var res = "Erro";
+            txRes.value = res;
+        }
+        btMult.addEventListener("click", multiplicar);
+        function multiplicar() {
+            var v1 = parseFloat(txV1.value);
+            var v2 = parseFloat(txV2.value);
+            var res = v1 * v2;
+            txRes.value = res;
+        }
+        btLimp.addEventListener("click", limpar);
+        function limpar() {
+            txV1.value = " ";
+            txV2.value = " ";
+            txRes.value = " ";
+        }
+    </script>
+</body>
+</html>
